@@ -1,0 +1,990 @@
+<!DOCTYPE html >
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Gallery</title>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $is_parent_page = true;
+</script>
+<script src="js/login.js"></script>
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css"  href="css/global.css"></link>
+<script type="text/javascript" src="js/FWDGrid.js"></script>
+</style>
+	
+	<!-- Setup grid (all parameters are explained in detail in the help file) -->
+	<script type="text/javascript">
+		FWDUtils.onReady(function(){
+			var grid = new FWDGrid({
+					
+				//main settings
+				gridHolderId:"myDiv",
+				gridPlayListAndSkinId:"playlist",
+				showContextMenu:"yes",
+				
+				//grid settings
+				thumbnailOverlayType:"text",
+				addMargins:"no",
+				loadMoreThumbsButtonOffest:3,
+				thumbnailBaseWidth:278,
+				thumbnailBaseHeight:188,
+				nrOfThumbsToShowOnSet:29,
+				horizontalSpaceBetweenThumbnails:4,
+				verticalSpaceBetweenThumbnails:4,
+				thumbBorderSize:2,
+				thumbnailOverlayOpacity:.85,
+				backgroundColor:"#111111",
+				thumbnailOverlayColor:"#000000",
+				thumbnailBackgroundColor:"#333333",
+				thumbnailBorderNormalColor:"#FFFFFF",
+				thumbnailBorderSelectedColor:"#FFFFFF",
+
+				//ligtbox settings (optional)
+				addLightBoxKeyboardSupport:"yes",
+				showLightBoxNextAndPrevButtons:"yes",
+				showLightBoxZoomButton:"yes",
+				showLightBoxInfoButton:"yes",
+				showLighBoxSlideShowButton:"yes",
+				slideShowAutoPlay:"no",
+				showContextMenu:"yes",
+				lighBoxBackgroundColor:"#000000",
+				lightBoxInfoWindowBackgroundColor:"#FFFFFF",
+				lightBoxItemBorderColor:"#FFFFFF",
+				lightBoxItemBackgroundColor:"#222222",
+				lightBoxMainBackgroundOpacity:.8,
+				lightBoxInfoWindowBackgroundOpacity:.9,
+				lightBoxBorderSize:2,
+				lightBoxSlideShowDelay:4
+					
+			});
+		})
+	</script>
+</head>
+
+<body>
+
+<div style="clear:both"></div>
+<div id="header">
+	<div id="menu">
+	<ul>
+    	<li><a href="index.html">Home</a></li>
+        <li><a href="tour.html">Tours</a></li>
+    </ul>
+    <a href="index.html"><img src="" width="190"/></a>
+    <ul>
+    	<li><a href="gallery.html">Gallery</a></li>
+        <li><a href="#login_form" role="button" data-toggle="modal">Login</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    </div>
+</div>
+<div id="myDiv"></div>
+<div id="content4">
+	<!-- gallery data list -->
+	<ul id="playlist" style="display: none;">
+		
+		<!-- skin -->
+		<ul>
+			<li data-preloader-path="load/skin_round/rotite-30-29.png"></li>
+			<li data-show-more-thumbnails-button-normal-path="load/skin_round/showMoreThumbsNormalState.png"></li>
+			<li data-show-more-thumbnails-button-selectsed-path="load/skin_round/showMoreThumbsSelectedState.png"></li>
+			<li data-image-icon-path="load/skin_round/photoIcon.png"></li>
+			<li data-video-icon-path="load/skin_round/videoIcon.png"></li>
+			<li data-link-icon-path="load/skin_round/linkIcon.png"></li>
+			<li data-lightbox-slideshow-preloader-path="load/skin_round/slideShowPreloader.png"></li>
+			<li data-lightbox-close-button-normal-path="load/skin_round/galleryCloseButtonNormalState.png"></li>
+			<li data-lightbox-close-button-selected-path="load/skin_round/galleryCloseButtonSelectedState.png"></li>
+			<li data-lightbox-next-button-normal-path="load/skin_round/nextIconNormalState.png"></li>
+			<li data-lightbox-next-button-selected-path="load/skin_round/nextIconSelectedState.png"></li>
+			<li data-lightbox-prev-button-normal-path="load/skin_round/prevIconNormalState.png"></li>
+			<li data-lightbox-prev-button-selected-path="load/skin_round/prevIconSelectedState.png"></li>
+			<li data-lightbox-play-button-normal-path="load/skin_round/playButtonNormalState.png"></li>
+			<li data-lightbox-play-button-selected-path="load/skin_round/playButtonSelectedState.png"></li>
+			<li data-lightbox-pause-button-normal-path="load/skin_round/pauseButtonNormalState.png"></li>
+			<li data-lightbox-pause-button-selected-path="load/skin_round/pauseButtonSelectedState.png"></li>
+			<li data-lightbox-maximize-button-normal-path="load/skin_round/maximizeButtonNormalState.png"></li>
+			<li data-lightbox-maximize-button-selected-path="load/skin_round/maximizeButtonSelectedState.png"></li>
+			<li data-lightbox-minimize-button-normal-path="load/skin_round/minimizeButtonNormalState.png"></li>
+			<li data-lightbox-minimize-button-selected-path="load/skin_round/minimizeButtonSelectedState.png"></li>
+			<li data-lightbox-info-button-open-normal-path="load/skin_round/infoButtonOpenNormalState.png"></li>
+			<li data-lightbox-info-button-open-selected-path="load/skin_round/infoButtonOpenSelectedState.png"></li>
+			<li data-lightbox-info-button-close-normal-path="load/skin_round/infoButtonCloseNormalPath.png"></li>
+			<li data-lightbox-info-button-close-selected-path="load/skin_round/infoButtonCloseSelectedPath.png"></li>
+		</ul> 
+			
+		<!-- images list -->
+		<ul>
+			<ul>
+				<li data-type="media" data-url="load/images/a1.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/a1.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info>
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+				
+			<ul>
+				<li data-type="media" data-url="load/images/1.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/1.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/2.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/2.jpg"></li>
+				<li data-thumbnail-text="">
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText">
+					</p>
+				</li>
+			</ul>
+				
+			<ul>
+			    <li data-type="media" data-width="640" data-height="420" data-url="https://vimeo.com/59649749"></li>
+				<li data-thumbnail-path="load/thumbnails/3.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+				
+			<ul>
+				<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+				<li data-thumbnail-path="load/thumbnails/4.jpg"></li>
+					<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+				
+			<ul>
+				<li data-type="media" data-url="load/images/a2.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/a2.jpg"></li>
+				<li data-thumbnail-text="">
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"> </p>
+				</li>
+			</ul>
+				
+			<ul>
+			    <li data-type="media" data-width="640" data-height="420" data-url="http://www.youtube.com/watch?v=-j252ji9NsE"></li>
+				<li data-thumbnail-path="load/thumbnails/5.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"> </p>
+				</li>
+			</ul>
+				
+			<ul>
+				<li data-type="media" data-url="load/images/v1.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/v1.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+				
+			<ul>
+				<li data-type="media" data-url="load/images/6.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/6.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+				
+			<ul>
+				<li data-type="media" data-url="load/images/7.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/7.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+				
+			<ul>
+				<li data-type="media" data-url="load/images/8.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/8.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info>
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/a3.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/a3.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info>
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+				
+			<ul>
+				<li data-type="media" data-url="load/images/9.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/9.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info>
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"> </p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+				<li data-thumbnail-path="load/thumbnails/10.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+				
+			<ul>
+				<li data-type="media" data-url="load/images/v2.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/v2.jpg"></li>
+				<li data-thumbnail-text="">
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText">
+					</p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-width="640" data-height="420" data-url="https://vimeo.com/59649749"></li>
+				<li data-thumbnail-path="load/thumbnails/11.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"> </p>
+				</li>
+			</ul>
+				
+			<ul>
+				<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+				<li data-thumbnail-path="load/thumbnails/12.jpg"></li>
+					<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/13.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/13.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"> </p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/14.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/14.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+		
+			<ul>
+				<li data-type="media" data-url="load/images/v3.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/v3.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>	
+			
+			<ul>
+				<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+				<li data-thumbnail-path="load/thumbnails/15.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/16.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/16.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/v4.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/v4.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info>
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/17.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/17.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info>
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-width="640" data-height="420" data-url="http://www.youtube.com/watch?v=-j252ji9NsE"></li>
+				<li data-thumbnail-path="load/thumbnails/18.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+				<li data-thumbnail-path="load/thumbnails/19.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/20.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/20.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"> </p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+				<li data-thumbnail-path="load/thumbnails/21.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+		
+			<ul>
+				<li data-type="media" data-width="640" data-height="420" data-url="https://vimeo.com/59649749"></li>
+				<li data-thumbnail-path="load/thumbnails/22.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			
+			
+			
+			
+			
+			<ul>
+				<li data-type="media" data-url="load/images/a5.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/a5.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info>
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+				<li data-thumbnail-path="load/thumbnails/1.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+		
+			<ul>
+				<li data-type="media" data-url="load/images/2.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/2.jpg"></li>
+				<li data-thumbnail-text="">
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"> 
+					</p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-width="640" data-height="420" data-url="https://vimeo.com/59649749"></li>
+				<li data-thumbnail-path="load/thumbnails/3.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+				<li data-thumbnail-path="load/thumbnails/4.jpg"></li>
+					<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/a6.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/a6.jpg"></li>
+				<li data-thumbnail-text="">
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"> </p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-width="640" data-height="420" data-url="http://www.youtube.com/watch?v=-j252ji9NsE"></li>
+				<li data-thumbnail-path="load/thumbnails/5.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/v1.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/v1.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/6.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/6.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/7.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/7.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/8.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/8.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info>
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/a3.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/a3.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"> </p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info>
+					<p class="mediaDescriptionHeader"> .</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/9.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/9.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info>
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+				<li data-thumbnail-path="load/thumbnails/10.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/v2.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/v2.jpg"></li>
+				<li data-thumbnail-text="">
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText">
+					</p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-width="640" data-height="420" data-url="https://vimeo.com/59649749"></li>
+				<li data-thumbnail-path="load/thumbnails/11.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+				<li data-thumbnail-path="load/thumbnails/12.jpg"></li>
+					<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/13.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/13.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/14.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/14.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+		
+			<ul>
+				<li data-type="media" data-url="load/images/v3.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/v3.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>	
+			
+			<ul>
+				<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+				<li data-thumbnail-path="load/thumbnails/15.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/16.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/16.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/v4.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/v4.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info>
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/17.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/17.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info>
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-width="640" data-height="420" data-url="http://www.youtube.com/watch?v=-j252ji9NsE"></li>
+				<li data-thumbnail-path="load/thumbnails/18.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader">.</p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+				<li data-thumbnail-path="load/thumbnails/19.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/20.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/20.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+				<li data-thumbnail-path="load/thumbnails/21.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"> </p>
+				</li>
+			</ul>
+		
+			<ul>
+				<li data-type="media" data-width="640" data-height="420" data-url="https://vimeo.com/59649749"></li>
+				<li data-thumbnail-path="load/thumbnails/22.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-url="load/images/2.jpg"></li>
+				<li data-thumbnail-path="load/thumbnails/2.jpg"></li>
+				<li data-thumbnail-text="">
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText">
+					</p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="media" data-width="640" data-height="420" data-url="https://vimeo.com/59649749"></li>
+				<li data-thumbnail-path="load/thumbnails/3.jpg"></li>
+				<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"> </p>
+				</li>
+			</ul>
+			
+			<ul>
+				<li data-type="link" data-url="http://www.google.com" data-target="_blank"></li>
+				<li data-thumbnail-path="load/thumbnails/4.jpg"></li>
+					<li data-thumbnail-text>
+					<p class="largeLabel"></p>
+					<p class="smallLabel"></p>
+				</li>
+				<li data-info="">
+					<p class="mediaDescriptionHeader"></p>
+					<p class="mediaDescriptionText"></p>
+				</li>
+			</ul>
+			
+		</ul>
+		
+	</ul>
+</div>
+<div id="footer">
+	<div id="info_footer">
+    	<div class="about">
+		<h2>About us</h2>
+            <div class="me">
+            <p>We 're Team SHARE.</p>
+            <p>3 members:</p>
+            <p>A SHIVA KRISHNA</p>
+            <p>AMIT SINGH</p>
+            <p>REKITA SUPYAL</p>
+            
+            </div>
+        </div>
+        <div class="about">
+		<h2>Support</h2>
+            <div class="me">
+            <p>A SHIVA KRISHNA</p>
+            <p>askme21@gmail.com</p>
+             <p>AMIT SINGH</p>
+            <p>amitsingh07@yahoo.com</p>
+            <p>REKITA SUPYAL</p>
+            <p>rsupyal@yahoo.com</p>                       
+            </div>
+        </div>
+       	
+<!-- LOGIN FORM -->
+<div id="login_form" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Login/Register</h3>
+    </div>
+    <div class="modal-body">
+                <div class="alert alert-error" id="error_message" style="display:none">
+               
+                </div>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="inputEmail">User</label>
+                <div class="controls">
+                    <input type="text" id="in_username" placeholder="User Name">
+                </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="inputPassword">Password</label>
+                    <div class="controls">
+                        <input type="password" id="in_password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">               
+                        <button type="submit" class="btn btn-primary" id="login_btn">Login</button>
+                    </div>
+                </div>
+            </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        <a href="register.html" class="btn btn-primary" style="font-size:14px; text-decoration: none;">Register</a>        
+    </div>
+</div>
+
+</body>
+</html>
